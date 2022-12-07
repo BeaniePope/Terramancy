@@ -1,6 +1,7 @@
 package com.github.BeaniePope.terramancy;
 
-import com.github.BeaniePope.terramancy.init.modItems;
+
+import com.github.BeaniePope.terramancy.item.modItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;

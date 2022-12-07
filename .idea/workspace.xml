@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc091c65-fa62-4e65-8377-30045af2a5e9" name="Changes" comment="" />
+    <list default="true" id="bc091c65-fa62-4e65-8377-30045af2a5e9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/terramancy/models/item/impetusdust.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data.terramancy.recipes/impetusdust.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data.terramancy.recipes/mortarnpestle.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/BeaniePope/terramancy/item/ModCreativeModeTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/BeaniePope/terramancy/item/ModCreativeModeTab.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/BeaniePope/terramancy/item/modItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/BeaniePope/terramancy/item/modItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/BeaniePope/terramancy/terramancy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/BeaniePope/terramancy/terramancy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/terramancy/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/terramancy/lang/en_us.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,10 +63,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2IYOb2WkAuMmxd0xVWvBqXhBPJv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -66,12 +79,15 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Terramancy-Mod-Folder/terramancy"
+    "last_opened_file_path": "C:/Terramancy-Mod-Folder/terramancy/src/main/resources/data.terramancy.recipes"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.github.BeaniePope.MagicalCreate" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Terramancy-Mod-Folder\terramancy\src\main\resources\data.terramancy.recipes" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.terramancy [runClient]">
@@ -133,6 +149,29 @@
       <option name="presentableId" value="Default" />
       <updated>1670355119644</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1670377703569</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670377703569</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
