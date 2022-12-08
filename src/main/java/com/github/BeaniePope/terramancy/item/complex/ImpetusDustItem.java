@@ -7,8 +7,10 @@ public class ImpetusDustItem extends Item {
         super(pProperties);
     }
 
-    @Override
-    public boolean isEdible() {
-        return true;
-    }
+  /* @Override
+   public boolean isEdible() {
+       return this.isEdible();
+   }
+*/
+
 }

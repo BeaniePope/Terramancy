@@ -1,5 +1,6 @@
 package com.github.BeaniePope.terramancy.item.complex;
 
+import com.github.BeaniePope.terramancy.item.modItems;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -9,10 +10,8 @@ public class MortarNPestleItem extends Item{
     }
 
 
-
     @Override
     public ItemStack getContainerItem(ItemStack itemStack) {
-        ItemStack item = itemStack.copy();
-        return item;
+        return super.getContainerItem(new ItemStack(modItems.MORTARNPESTLE.get()));
     }
 }
