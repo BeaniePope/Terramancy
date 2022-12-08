@@ -16,11 +16,10 @@ import net.minecraftforge.registries.RegistryObject;
 public class modItems {
     private static final String MODID = "terramancy";
 
-    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
     public static final RegistryObject<Item> MORTARNPESTLE = ITEMS.register("mortarnpestle",
-            () -> new MortarNPestleItem(new Item.Properties().tab(ModCreativeModeTab.TERRAMANCY_TAB)
-                    .defaultDurability(50)));
+            () -> new MortarNPestleItem(new Item.Properties().tab(ModCreativeModeTab.TERRAMANCY_TAB)));
     public static final RegistryObject<Item> IMPETUSDUST = ITEMS.register("impetusdust",
             () -> new ImpetusDustItem(new Item.Properties().tab(ModCreativeModeTab.TERRAMANCY_TAB)
                     .food(new FoodProperties.Builder().nutrition(1).saturationMod(1)
