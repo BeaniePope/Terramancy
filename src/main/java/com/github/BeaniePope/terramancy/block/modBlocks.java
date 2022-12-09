@@ -20,7 +20,7 @@ public class modBlocks {
     private static final String MODID = "terramancy";
 
     public static final RegistryObject<Block> FABRICATOR = registerBlock("fabricator",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)),
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(9f)),
             ModCreativeModeTab.TERRAMANCY_TAB);
 
     public static <T extends Block> RegistryObject<T>  registerBlock(String name, Supplier<T> block, CreativeModeTab tab){

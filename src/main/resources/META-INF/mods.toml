@@ -27,22 +27,19 @@ displayName="Terramancy" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="examplemod.png" #optional
+logoFile="theoriginal.png" #optional
 # A text field displayed in the mod UI
-credits="Extram34 for every single texture" #optional
+credits="Extram34, Avalon" #optional
 # A text field displayed in the mod UI
-authors="BeaniePope" #optional
+authors="BeaniePope, Extram34" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Test Test 123
+Terramancy; Magic and Science, Yin-Yang, Power and Knowledge
 
-Terramancy
+DESC
 
-Is
-
-Gay
-
-(real)
+Credits:
+Mod is spiritually authored by Extram34, I simply brought his idea's to life. Thank you <3
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.terramancy]] #optional
