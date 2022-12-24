@@ -1,6 +1,8 @@
 package com.github.BeaniePope.terramancy;
 
 
+import com.github.BeaniePope.terramancy.block.entity.modBlockEntities;
+import com.github.BeaniePope.terramancy.block.modBlocks;
 import com.github.BeaniePope.terramancy.item.modItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Block;
@@ -21,6 +23,7 @@ import org.slf4j.Logger;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
+
 @Mod("terramancy")
 public class terramancy
 {
@@ -30,8 +33,10 @@ public class terramancy
     public terramancy()
     {
         // Register the setup method for modloading
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus(); //Heyo this does funky passing stuff to minecraft to make items and blocks
         modItems.register(eventBus);
+        modBlocks.register(eventBus);
+        modBlockEntities.register(eventBus);
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
         //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);

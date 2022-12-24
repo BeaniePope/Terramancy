@@ -1,11 +1,13 @@
 package com.github.BeaniePope.terramancy.block;
 
+import com.github.BeaniePope.terramancy.block.complex.FabricatorBlock;
 import com.github.BeaniePope.terramancy.item.ModCreativeModeTab;
 import com.github.BeaniePope.terramancy.item.modItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -18,10 +20,16 @@ import java.util.function.Supplier;
 
 public class modBlocks {
     private static final String MODID = "terramancy";
+    private static final DeferredRegister<Block> BLOCKS =
+            DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
 
-    public static final RegistryObject<Block> FABRICATOR = registerBlock("fabricator",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(9f)),
+//elon musk could never
+    public static final RegistryObject<Block> FABRICATOR_BLOCK = registerBlock("fabricator_block",
+            () -> new FabricatorBlock(BlockBehaviour.Properties.of(Material.METAL).strength(3f)),
             ModCreativeModeTab.TERRAMANCY_TAB);
+//    public static final RegistryObject<Block> TEST_BLOCK = registerBlock("gay",
+//            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noCollission()),
+//            ModCreativeModeTab.TERRAMANCY_TAB);
 
     public static <T extends Block> RegistryObject<T>  registerBlock(String name, Supplier<T> block, CreativeModeTab tab){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -29,7 +37,7 @@ public class modBlocks {
         return toReturn;
     }
 
-    private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
+
 
     public static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab){
 

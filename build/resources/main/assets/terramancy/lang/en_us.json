@@ -1,6 +1,8 @@
 {
   "item.terramancy.mortarnpestle": "Mortar n' Pestle",
   "item.terramancy.impetusdust": "Impetus Dust",
-  "itemGroup.terramancytab": "Terramancy"
+  "itemGroup.terramancytab": "Terramancy",
+
+  "block.terramancy.fabricator_block": "Fabricator"
 
 }

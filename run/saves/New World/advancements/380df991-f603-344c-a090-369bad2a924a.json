@@ -1,0 +1,9 @@
+{
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:beach": "2022-12-23 18:51:10 -0500"
+    },
+    "done": false
+  },
+  "DataVersion": 2975
+}
