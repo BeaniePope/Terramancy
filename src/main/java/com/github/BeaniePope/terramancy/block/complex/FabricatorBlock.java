@@ -130,8 +130,8 @@ public class FabricatorBlock extends BaseEntityBlock {
         entity.itemHandler.extractItem(8, 1, false);
 //        entity.itemHandler.getStackInSlot(2).hurt(1, new Random(), null);
 
-        entity.itemHandler.setStackInSlot(3, new ItemStack(modItems.CITRINE.get(),
-                entity.itemHandler.getStackInSlot(3).getCount() + 1));
+//        entity.itemHandler.setStackInSlot(3, new ItemStack(modItems.CITRINE.get(),
+//                entity.itemHandler.getStackInSlot(3).getCount() + 1));
     }
     private static boolean hasRecipe(FabricatorBlockEntity entity) {
 //        boolean hasItemInFirstSlot = entity.itemHandler.getStackInSlot(0).getItem() == ModItems.RAW_CITRINE.get();

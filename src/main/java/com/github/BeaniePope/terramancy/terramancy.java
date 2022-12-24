@@ -4,7 +4,10 @@ package com.github.BeaniePope.terramancy;
 import com.github.BeaniePope.terramancy.block.entity.modBlockEntities;
 import com.github.BeaniePope.terramancy.block.modBlocks;
 import com.github.BeaniePope.terramancy.item.modItems;
+import com.github.BeaniePope.terramancy.screen.FabricatorScreen;
+import com.github.BeaniePope.terramancy.screen.modMenuTypes;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,6 +16,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
@@ -37,7 +41,9 @@ public class terramancy
         modItems.register(eventBus);
         modBlocks.register(eventBus);
         modBlockEntities.register(eventBus);
+        modMenuTypes.register(eventBus);
         eventBus.addListener(this::setup);
+        eventBus.addListener(this::clientSetup);
         // Register the enqueueIMC method for modloading
         //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         // Register the processIMC method for modloading
@@ -51,6 +57,10 @@ public class terramancy
         // some preinit code
       //  LOGGER.info("HELLO FROM PREINIT");
        // LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event){
+        MenuScreens.register(modMenuTypes.FABRICATOR_MENU.get(), FabricatorScreen::new);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

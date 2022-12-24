@@ -2,6 +2,7 @@ package com.github.BeaniePope.terramancy.block.entity.complex;
 
 import com.github.BeaniePope.terramancy.block.complex.FabricatorBlock;
 import com.github.BeaniePope.terramancy.block.entity.modBlockEntities;
+import com.github.BeaniePope.terramancy.screen.FabricatorMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -52,7 +53,7 @@ public class FabricatorBlockEntity extends BlockEntity implements MenuProvider {
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory, Player pPlayer) {
-        return new FabricatorBlockMenu(pContainerId, pInventory, this);
+        return new FabricatorMenu(pContainerId, pInventory, this);
     }
 
     @Nonnull
@@ -115,7 +116,7 @@ public class FabricatorBlockEntity extends BlockEntity implements MenuProvider {
         entity.itemHandler.extractItem(6, 1, false);
         entity.itemHandler.extractItem(7, 1, false);
         entity.itemHandler.extractItem(8, 1, false);
-        entity.itemHandler.getStackInSlot(2).hurt(1, new Random(), null);
+
 
 //        entity.itemHandler.setStackInSlot(3, new ItemStack(modItems.CITRINE.get(),
 //                entity.itemHandler.getStackInSlot(3).getCount() + 1));

@@ -1,0 +1,148 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 12/24/22, 5:41 PM
+Description: Ticking block entity
+
+java.lang.RuntimeException: Slot 10 not in valid range - [0,10)
+	at net.minecraftforge.items.ItemStackHandler.validateSlotIndex(ItemStackHandler.java:207) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2378%2385!/:?] {re:classloading}
+	at net.minecraftforge.items.ItemStackHandler.getStackInSlot(ItemStackHandler.java:59) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2378%2385!/:?] {re:classloading}
+	at com.github.BeaniePope.terramancy.block.entity.complex.FabricatorBlockEntity.hasNotReachedStackLimit(FabricatorBlockEntity.java:133) ~[%2384!/:?] {re:classloading}
+	at com.github.BeaniePope.terramancy.block.entity.complex.FabricatorBlockEntity.tick(FabricatorBlockEntity.java:104) ~[%2384!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$BoundTickingBlockEntity.tick(LevelChunk.java:673) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$RebindableTickingBlockEntityWrapper.tick(LevelChunk.java:766) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.tickBlockEntities(Level.java:476) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:327) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:902) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:842) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:685) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:261) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraftforge.items.ItemStackHandler.validateSlotIndex(ItemStackHandler.java:207) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2378%2385!/:?] {re:classloading}
+	at net.minecraftforge.items.ItemStackHandler.getStackInSlot(ItemStackHandler.java:59) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2378%2385!/:?] {re:classloading}
+	at com.github.BeaniePope.terramancy.block.entity.complex.FabricatorBlockEntity.hasNotReachedStackLimit(FabricatorBlockEntity.java:133) ~[%2384!/:?] {re:classloading}
+	at com.github.BeaniePope.terramancy.block.entity.complex.FabricatorBlockEntity.tick(FabricatorBlockEntity.java:104) ~[%2384!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$BoundTickingBlockEntity.tick(LevelChunk.java:673) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$RebindableTickingBlockEntityWrapper.tick(LevelChunk.java:766) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.tickBlockEntities(Level.java:476) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:327) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+-- Block entity being ticked --
+Details:
+	Name: terramancy:fabricator_block_entity // com.github.BeaniePope.terramancy.block.entity.complex.FabricatorBlockEntity
+	Block: Block{terramancy:fabricator_block}[facing=north]
+	Block location: World: (43,83,84), Section: (at 11,3,4 in 2,5,5; chunk contains blocks 32,-64,80 to 47,319,95), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Block: Block{terramancy:fabricator_block}[facing=north]
+	Block location: World: (43,83,84), Section: (at 11,3,4 in 2,5,5; chunk contains blocks 32,-64,80 to 47,319,95), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+Stacktrace:
+	at net.minecraft.world.level.chunk.LevelChunk$BoundTickingBlockEntity.tick(LevelChunk.java:673) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading}
+	at net.minecraft.world.level.chunk.LevelChunk$RebindableTickingBlockEntityWrapper.tick(LevelChunk.java:766) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading}
+	at net.minecraft.world.level.Level.tickBlockEntities(Level.java:476) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.level.ServerLevel.tick(ServerLevel.java:327) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:902) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:842) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:685) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:261) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayer['Dev'/199, l='ServerLevel[gay]', x=41.42, y=83.94, z=84.25]]
+	Chunk stats: 2209
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,66,16), Section: (at 0,2,0 in 0,4,1; chunk contains blocks 0,-64,16 to 15,319,31), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 89947 game time, 5060 day time
+	Level name: gay
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 22986 (now: false), thunder time: 78704 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:902) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:842) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.client.server.IntegratedServer.tickServer(IntegratedServer.java:84) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:685) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:261) ~[forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1.18.2.jar%2379!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:833) [?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.18.2
+	Minecraft Version ID: 1.18.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.5, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode, sharing), Oracle Corporation
+	Memory: 1008492544 bytes (961 MiB) / 2342518784 bytes (2234 MiB) up to 4221566976 bytes (4026 MiB)
+	CPUs: 16
+	Processor Vendor: GenuineIntel
+	Processor Name: 11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+	Identifier: Intel64 Family 6 Model 141 Stepping 1
+	Microarchitecture: unknown
+	Frequency (GHz): 2.30
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: Intel(R) UHD Graphics
+	Graphics card #0 vendor: Intel Corporation (0x8086)
+	Graphics card #0 VRAM (MB): 1024.00
+	Graphics card #0 deviceId: 0x9a60
+	Graphics card #0 versionInfo: DriverVersion=30.0.101.1404
+	Graphics card #1 name: NVIDIA GeForce RTX 3050 Laptop GPU
+	Graphics card #1 vendor: NVIDIA (0x10de)
+	Graphics card #1 VRAM (MB): 4095.00
+	Graphics card #1 deviceId: 0x25a2
+	Graphics card #1 versionInfo: DriverVersion=31.0.15.1700
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 3.20
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 40905.82
+	Virtual memory used (MB): 35821.43
+	Swap memory total (MB): 24802.00
+	Swap memory used (MB): 5253.27
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayer['Dev'/199, l='ServerLevel[gay]', x=41.42, y=83.94, z=84.25]]
+	Data Packs: vanilla, mod:forge, mod:terramancy
+	World Generation: Stable
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'; Server brand changed to 'forge'
+	ModLauncher: 9.1.3+9.1.3+main.9b69c82a
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		 mixin PLUGINSERVICE 
+		 eventbus PLUGINSERVICE 
+		 slf4jfixer PLUGINSERVICE 
+		 object_holder_definalize PLUGINSERVICE 
+		 runtime_enum_extender PLUGINSERVICE 
+		 capability_token_subclass PLUGINSERVICE 
+		 accesstransformer PLUGINSERVICE 
+		 runtimedistcleaner PLUGINSERVICE 
+		 mixin TRANSFORMATIONSERVICE 
+		 fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		lowcodefml@null
+		javafml@null
+	Mod List: 
+		forge-1.18.2-40.1.86_mapped_parchment_2022.11.06-1|Minecraft                     |minecraft                     |1.18.2              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		                                                  |Forge                         |forge                         |40.1.86             |DONE      |Manifest: NOSIGNATURE
+		main                                              |Terramancy                    |terramancy                    |0.0NONE             |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 13b3ef3e-d7ce-4a72-8fc2-c35ffa79f426
+	FML: 40.1
+	Forge: net.minecraftforge:40.1.86
