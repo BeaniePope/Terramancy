@@ -4,6 +4,7 @@ package com.github.BeaniePope.terramancy;
 import com.github.BeaniePope.terramancy.block.entity.modBlockEntities;
 import com.github.BeaniePope.terramancy.block.modBlocks;
 import com.github.BeaniePope.terramancy.item.modItems;
+import com.github.BeaniePope.terramancy.recipe.modRecipes;
 import com.github.BeaniePope.terramancy.screen.FabricatorScreen;
 import com.github.BeaniePope.terramancy.screen.modMenuTypes;
 import com.mojang.logging.LogUtils;
@@ -42,6 +43,7 @@ public class terramancy
         modBlocks.register(eventBus);
         modBlockEntities.register(eventBus);
         modMenuTypes.register(eventBus);
+        modRecipes.register(eventBus);
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
         // Register the enqueueIMC method for modloading
